@@ -2,7 +2,7 @@ import React from 'react';
 import { View, ActivityIndicator, StatusBar, StyleSheet, AsyncStorage } from 'react-native';
 import { createAppContainer, createStackNavigator, createSwitchNavigator } from 'react-navigation';
 
-import Auth from '../screens/Auth/Auth'
+import Auth from '../screens/AuthModule/Auth'
 import MainTabNavigator from './MainTabNavigator';
 
 const styles = StyleSheet.create({

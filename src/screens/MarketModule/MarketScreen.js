@@ -1,18 +1,21 @@
 import React from 'react';
 import { ScrollView, StyleSheet } from 'react-native';
-import { ExpoLinksView } from '@expo/samples';
-import Intro  from './Intro'
+import PriceTrend from './PriceTrend/PriceTrend';
+import MarketTab from './TradeControl/MarketTab';
+import MarketSale from './TradeControl/MarketSale';
 
 export default function LinksScreen() {
   return (
     <ScrollView style={styles.container}>
-      <Intro />
+      <PriceTrend />
+      <MarketTab />
+      <MarketSale />
     </ScrollView>
   );
 }
 
 LinksScreen.navigationOptions = {
-  title: 'Links',
+  title: 'Market',
 };
 
 const styles = StyleSheet.create({

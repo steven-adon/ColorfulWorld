@@ -17,13 +17,13 @@ export default class MarketSale extends Component {
     super(props)
     this.state = {
       selectedIndex: 1,
-      loaded: true, //数据是否加载完成
+      loaded: true,
       dataSource: [
         { date: '06-06 12:00', count: '3', price: '6.11', state: '立即出让' },
         { date: '06-07 12:00', count: '20', price: '0.66', state: '立即出让' },
         { date: '06-05 14:00', count: '4', price: '0.99', state: '立即出让' },
         { date: '06-06 15:00', count: '6', price: '0.88', state: '立即出让' }
-      ], //数据源
+      ],
       nameData: [
         { name: '小明', userId: '10002' },
         { name: '小灰', userId: '10003' },
@@ -75,10 +75,6 @@ export default class MarketSale extends Component {
         }
       ]
     }
-
-    // 在ES6中，如果在自定义的函数里使用了this关键字，则需要对其进行“绑定”操作，否则this的指向不对
-    // 像下面这行代码一样，在constructor中使用bind是其中一种做法（还有一些其他做法，如使用箭头函数等）
-    // this.fetchData = this.fetchData.bind(this);
   }
   componentDidMount() {
     // 添加监听者
@@ -154,6 +150,7 @@ export default class MarketSale extends Component {
     return <UserRankItem name={item.name} userId={item.userId} />
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -163,7 +160,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#F5FCFF'
   },
   list: {
-    // paddingTop: 20,
     backgroundColor: '#F5FCFF'
   }
 })

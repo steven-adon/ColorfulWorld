@@ -8,14 +8,14 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 
 import TabBarIcon from '../components/TabBarIcon';
-// HomeModule
-import HomeScreen from '../screens/HomeModule/HomeScreen';
-import OtherScreen from '../screens/HomeModule/OtherScreen/OtherScreen'
-import LinksScreen from '../screens/LinksModule/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
 
-const HomeStack = createStackNavigator({
-  Home: HomeScreen, Other: {
+import FactoryScreen from '../screens/FactoryModule/FactoryScreen';
+import OtherScreen from '../screens/FactoryModule/OtherScreen/OtherScreen'
+import MarketScreen from '../screens/MarketModule/MarketScreen';
+import WalletScreen from '../screens/WalletModule/WalletScreen';
+
+const FactoryStack = createStackNavigator({
+  Home: FactoryScreen, Other: {
     screen: OtherScreen,
     navigationOptions: ({ navigation }) => {
       return {
@@ -39,7 +39,7 @@ const HomeStack = createStackNavigator({
 
 const AppDrawerNavigator = createDrawerNavigator({
   Dashboard: {
-    screen: HomeStack,
+    screen: FactoryStack,
     navigationOptions: {
       drawerLabel: 'Dashboard-World',
       drawerIcon: () => (
@@ -48,7 +48,7 @@ const AppDrawerNavigator = createDrawerNavigator({
     }
   },
   Personal: {
-    screen: HomeStack,
+    screen: FactoryStack,
     navigationOptions: {
       drawerLabel: 'Personl-Space',
       drawerIcon: () => (
@@ -69,49 +69,49 @@ const AppDrawerNavigator = createDrawerNavigator({
 });
 
 AppDrawerNavigator.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: 'Factory Coin',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={
         Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          ? 'ios-bowtie'
+          : 'ios-bowtie'
       }
     />
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+const MarketStack = createStackNavigator({
+  Market: MarketScreen,
 });
 
-LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+MarketStack.navigationOptions = {
+  tabBarLabel: 'Market',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={Platform.OS === 'ios' ? 'logo-bitcoin' : 'logo-bitcoin'}
     />
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const WalletStack = createStackNavigator({
+  Wallet: WalletScreen
 });
 
-SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+WalletStack.navigationOptions = {
+  tabBarLabel: 'My Wallet',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={Platform.OS === 'ios' ? 'ios-card' : 'md-card'}
     />
-  ),
+  )
 };
 
 export default createBottomTabNavigator({
   HomeStack: { screen: AppDrawerNavigator },
-  LinksStack,
-  SettingsStack,
+  MarketStack,
+  WalletStack
 });

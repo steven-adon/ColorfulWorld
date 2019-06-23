@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
-import { StyleSheet, TouchableOpacity, Text } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
 export default class CustomBtn extends Component {
   render() {
-    const { title, onClick } = this.props
+    const { onClick } = this.props
     return (
       <TouchableOpacity style={styles.container} onPress={onClick}>
         <Text style={styles.titleStyle}>{this.props.title}</Text>
@@ -11,6 +11,7 @@ export default class CustomBtn extends Component {
     )
   }
 }
+
 const styles = StyleSheet.create({
   container: {
     height: 44,
