@@ -133,8 +133,6 @@ export default class WheelD3Screen extends React.Component {
     return (
       <Animated.View
         style={{
-          borderWidth: 0.5,
-          borderColor: 'blue',
           width: '100%',
           height: knobSize * 2,
           flexDirection: 'row',
@@ -151,26 +149,17 @@ export default class WheelD3Screen extends React.Component {
           ]
         }}
       >
-        {arr.map(item => {
-          return (
-            <Svg
-              width={knobSize}
-              height={(knobSize * 100) / 57}
-              viewBox={`0 0 57 100`}
-              style={{
-                transform: [{ translateY: 8 }],
-                borderWidth: 1,
-                borderColor: 'green'
-              }}
-            >
-              <Path
-                d="M28.034,0C12.552,0,0,12.552,0,28.034S28.034,100,28.034,100s28.034-56.483,28.034-71.966S43.517,0,28.034,0z   M28.034,40.477c-6.871,0-12.442-5.572-12.442-12.442c0-6.872,5.571-12.442,12.442-12.442c6.872,0,12.442,5.57,12.442,12.442  C40.477,34.905,34.906,40.477,28.034,40.477z"
-                fill={knobFill}
-              />
+        <Svg
+          width={knobSize}
+          height={(knobSize * 100) / 57}
+          viewBox={`0 0 57 100`}
+        >
+          <Path
+            d="M28.034,0C12.552,0,0,12.552,0,28.034S28.034,100,28.034,100s28.034-56.483,28.034-71.966S43.517,0,28.034,0z   M28.034,40.477c-6.871,0-12.442-5.572-12.442-12.442c0-6.872,5.571-12.442,12.442-12.442c6.872,0,12.442,5.57,12.442,12.442  C40.477,34.905,34.906,40.477,28.034,40.477z"
+            fill={knobFill}
+          />
 
-            </Svg>
-          )
-        })}
+        </Svg>
       </Animated.View>
     )
   }
@@ -187,8 +176,6 @@ export default class WheelD3Screen extends React.Component {
         {this._renderKnob()}
         <Animated.View
           style={{
-            borderWidth: 1,
-            borderColor: 'red',
             alignItems: 'center',
             justifyContent: 'center',
             transform: [

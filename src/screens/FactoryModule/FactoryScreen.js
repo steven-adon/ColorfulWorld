@@ -1,6 +1,11 @@
 import React from 'react';
-import { AsyncStorage, Button, StyleSheet, Text, View } from 'react-native';
+import { AsyncStorage, Button, StyleSheet, Text, View, Image } from 'react-native';
 import CircleProgress from '../../components/CircleProgress/CircleProgress';
+
+import WheelD3 from '../../components/WheelD3/WheelD3'
+
+import Coins from '../../components/Coins/Coins'
+import CANDY  from '../../../assets/images/candy.png';
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -10,6 +15,7 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+
         <View style={styles.toolBtns}>
           <Button title="Show me more of the app" onPress={this._showMoreApp} />
           <Button
@@ -18,14 +24,22 @@ export default class HomeScreen extends React.Component {
           />
         </View>
 
-        <View style={styles.productCircle}>
+        <View style={styles.coins}>
+          {/* <WheelD3 /> */}
+          <Coins />
+        </View>
+
+
+        <View style={styles.circleProgress}>
           <CircleProgress
             size={220}
             progress={0.6}
             color={'red'}
             notFilledColor={'white'}
           >
-            <Text>My Candy!</Text>
+
+            <Image source={CANDY} style={styles.scale}/>
+            {/* <Text>My Candy!</Text> */}
           </CircleProgress>
         </View>
       </View>
@@ -46,24 +60,35 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     borderRadius: 4,
-    borderWidth: 2,
-    borderColor: 'red'
+    // borderWidth: 2,
+    // borderColor: 'red'
   },
   toolBtns: {
+    width: '100%',
+    flex: 1,
+    borderRadius: 4,
+    // borderWidth: 2,
+    // borderColor: 'blue'
+  },
+  coins: {
     width: '100%',
     flex: 3,
     borderRadius: 4,
     borderWidth: 2,
     borderColor: 'blue'
   },
-  productCircle: {
+  circleProgress: {
     width: '100%',
-    flex: 2,
+    flex: 3,
     borderRadius: 4,
     borderWidth: 2,
     borderColor: 'green',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center'
-  }
+  },
+  scale: {
+    width: '65%',
+    height: '65%',
+  },
 })

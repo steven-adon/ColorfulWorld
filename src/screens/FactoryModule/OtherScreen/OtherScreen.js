@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Button, StatusBar, StyleSheet, AsyncStorage } from 'react-native';
+import WheelD3 from '../../../components/WheelD3/WheelD3'
 
 export default class OtherScreen extends React.Component {
   static navigationOptions = {
@@ -11,6 +12,7 @@ export default class OtherScreen extends React.Component {
       <View style={styles.container}>
         <Button title="I'm done, sign me out" onPress={this._signOutAsync} />
         <StatusBar barStyle="default" />
+        <WheelD3 />
       </View>
     );
   }
