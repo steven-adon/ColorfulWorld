@@ -11,7 +11,7 @@ import TabBarIcon from '../components/TabBarIcon';
 // HomeModule
 import HomeScreen from '../screens/HomeModule/HomeScreen';
 import OtherScreen from '../screens/HomeModule/OtherScreen/OtherScreen'
-import LinksScreen from '../screens/LinksScreen';
+import LinksScreen from '../screens/LinksModule/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
