@@ -1004,6 +1004,21 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^12.0.9"
 
+"@popmotion/easing@^1.0.1":
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/@popmotion/easing/download/@popmotion/easing-1.0.2.tgz#17d925c45b4bf44189e5a38038d149df42d8c0b4"
+  integrity sha1-F9klxFtL9EGJ5aOAONFJ30LYwLQ=
+
+"@popmotion/popcorn@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.npm.taobao.org/@popmotion/popcorn/download/@popmotion/popcorn-0.4.0.tgz#089ba62a7a8801ba18876d42149d4289992b926c"
+  integrity sha1-CJumKnqIAboYh21CFJ1CiZkrkmw=
+  dependencies:
+    "@popmotion/easing" "^1.0.1"
+    framesync "^4.0.1"
+    hey-listen "^1.0.8"
+    style-value-types "^3.1.4"
+
 "@react-native-community/cli@^1.2.1":
   version "1.9.8"
   resolved "https://registry.npm.taobao.org/@react-native-community/cli/download/@react-native-community/cli-1.9.8.tgz#8488699f78b146cab2d7451951c4218671812cdc"
@@ -3414,6 +3429,13 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
+framesync@^4.0.1:
+  version "4.0.2"
+  resolved "https://registry.npm.taobao.org/framesync/download/framesync-4.0.2.tgz#b03b62852f12b0d80086b60834b089718f03cda5"
+  integrity sha1-sDtihS8SsNgAhrYINLCJcY8DzaU=
+  dependencies:
+    hey-listen "^1.0.5"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.npm.taobao.org/fresh/download/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -3654,6 +3676,11 @@ has@^1.0.1, has@^1.0.3:
   integrity sha1-ci18v8H2qoJB8W3YFOAR4fQeh5Y=
   dependencies:
     function-bind "^1.1.1"
+
+hey-listen@^1.0.5, hey-listen@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npm.taobao.org/hey-listen/download/hey-listen-1.0.8.tgz#8e59561ff724908de1aa924ed6ecc84a56a9aa68"
+  integrity sha1-jllWH/ckkI3hqpJO1uzISlapqmg=
 
 hoist-non-react-statics@^2.3.1, hoist-non-react-statics@^2.5.0:
   version "2.5.5"
@@ -7143,6 +7170,13 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.npm.taobao.org/strip-json-comments/download/strip-json-comments-2.0.1.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fstrip-json-comments%2Fdownload%2Fstrip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   integrity sha1-PFMZQukIwml8DsNEhYwobHygpgo=
+
+style-value-types@^3.1.4:
+  version "3.1.4"
+  resolved "https://registry.npm.taobao.org/style-value-types/download/style-value-types-3.1.4.tgz#8c0959d26405eb0cbad40097b496220d41c22169"
+  integrity sha1-jAlZ0mQF6wy61ACXtJYiDUHCIWk=
+  dependencies:
+    hey-listen "^1.0.8"
 
 supports-color@^2.0.0:
   version "2.0.0"
