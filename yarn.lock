@@ -6229,7 +6229,7 @@ react-native-screens@1.0.0-alpha.22, "react-native-screens@^1.0.0 || ^1.0.0-alph
   resolved "https://registry.npm.taobao.org/react-native-screens/download/react-native-screens-1.0.0-alpha.22.tgz#7a120377b52aa9bbb94d0b8541a014026be9289b"
   integrity sha1-ehIDd7Uqqbu5TQuFQaAUAmvpKJs=
 
-react-native-svg@9.4.0, react-native-svg@~9.4.0:
+react-native-svg@9.4.0:
   version "9.4.0"
   resolved "https://registry.npm.taobao.org/react-native-svg/download/react-native-svg-9.4.0.tgz#e428e0eae55aebd2355f1ff4f22675dad4611960"
   integrity sha1-5Cjg6uVa69I1Xx/08iZ12tRhGWA=
